@@ -18,7 +18,9 @@
   let isDark = false;
 
   onMount(() => {
-    isDark = localStorage.theme === "dark";
+    isDark =
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches);
   });
 
   const toggleMode = () => {

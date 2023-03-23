@@ -19,11 +19,8 @@
       (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
       document.documentElement.classList.add("dark");
-      // Whenever the user explicitly chooses dark mode
-      localStorage.theme = "dark";
     } else {
       document.documentElement.classList.remove("dark");
-      localStorage.theme = "";
     }
   </script>
 </html>
