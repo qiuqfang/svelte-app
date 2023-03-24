@@ -1,26 +1,15 @@
-<script>
-  import { beforeNavigate } from "$app/navigation";
-  import { page } from "$app/stores";
+<script lang="ts">
+  import type { RouteType } from "@/app";
+  import GeneralNavBar from "@/components/GeneralNavBar/index.svelte";
+
+  import { routes } from "@/main";
+
+  const navItems = (routes.filter((route) => route.id.startsWith("/settings"))[0] as RouteType)
+    .children as RouteType[];
 </script>
 
 <section class="flex w-[80%] h-full flex-wrap">
-  <nav
-    class="flex flex-col w-[200px] border-solid border rounded p-3 mr-3 max-sm:w-full max-sm:my-3"
-  >
-    <a
-      href="/settings/user"
-      class="my-2 hover:text-slate-500 {$page.route.id === '/settings/user' && 'text-slate-500'}"
-    >
-      User Settings
-    </a>
-    <a
-      href="/settings/permission"
-      class="my-2 hover:text-slate-500 {$page.route.id === '/settings/permission' &&
-        'text-slate-500'}"
-    >
-      Permission Settings
-    </a>
-  </nav>
+  <GeneralNavBar {navItems} />
 
   <main class="flex-auto">
     <slot />
