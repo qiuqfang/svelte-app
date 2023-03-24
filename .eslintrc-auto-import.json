@@ -1,0 +1,18 @@
+{
+  "globals": {
+    "afterUpdate": true,
+    "beforeUpdate": true,
+    "createEventDispatcher": true,
+    "getAllContexts": true,
+    "getContext": true,
+    "getStores": true,
+    "hasContext": true,
+    "navigating": true,
+    "onDestroy": true,
+    "onMount": true,
+    "page": true,
+    "setContext": true,
+    "tick": true,
+    "updated": true
+  }
+}
