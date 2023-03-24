@@ -31,20 +31,22 @@
   };
 </script>
 
-<nav class="h-[60px] flex justify-center items-center">
-  {#each routes as route}
-    <a
-      class="mx-1 w-[100px] h-[38px] flex justify-center items-center rounded transition-all hover:bg-slate-500 hover:text-white {isActive(
-        route,
-        $page.route.id
-      ) && 'bg-slate-500 text-white'}"
-      href={route.id}
-    >
-      <svelte:component this={route.icon} />
-      <span class="ml-1">{route.name}</span>
-    </a>
-  {/each}
-</nav>
+<header>
+  <nav class="h-[60px] flex justify-center items-center">
+    {#each routes as route}
+      <a
+        class="mx-1 w-[100px] h-[38px] flex justify-center items-center rounded transition-all hover:bg-slate-500 hover:text-white {isActive(
+          route,
+          $page.route.id
+        ) && 'bg-slate-500 text-white'}"
+        href={route.id}
+      >
+        <svelte:component this={route.icon} />
+        <span class="ml-1">{route.name}</span>
+      </a>
+    {/each}
+  </nav>
+</header>
 
 <main class="flex justify-center">
   <slot />
