@@ -1,4 +1,4 @@
-# SvelteKit WebApp
+# Svelte App
 
 🏕 This is a SvelteKit WebApp Template
 
