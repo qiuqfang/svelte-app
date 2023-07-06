@@ -5,7 +5,7 @@ import type { RouteType } from "./app";
 
 export const routes: RouteType[] = [
   { id: "/", name: "Home", icon: Home },
-  { id: "/about", name: "About", icon: About },
+  { id: "/example", name: "Example", icon: About },
   {
     id: "/settings",
     name: "Settings",

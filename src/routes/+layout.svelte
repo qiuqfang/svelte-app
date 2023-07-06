@@ -55,6 +55,7 @@
 <footer>
   <div class="flex justify-center items-center h-[60px]">
     <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <!-- svelte-ignore a11y-no-static-element-interactions -->
     <span on:click={toggleMode} class="hover:text-slate-500 transition-all">
       {#if isDark}
         <LightMode class="w-6 h-6 cursor-pointer dark:text-white dark:hover:text-slate-500" />
